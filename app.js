@@ -1,5 +1,5 @@
 let userScore = 0;
-let comScore = 0;
+let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
@@ -24,7 +24,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
         userScorePara.innerText = userScore;
         msg.innerText = `you win! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
-    } else {
+    } else {  
         compScore++;
         compScorePara.innerText = compScore;
         msg.innerText = `you lose. ${compChoice} beats your ${userChoice}`;
