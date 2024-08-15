@@ -7,6 +7,26 @@ const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 
+
+let modeBtn = document.querySelector("#mode");
+let body = document.querySelector("body")
+let currMode = "light";
+modeBtn.addEventListener("click", ()=> {//mouseover
+    if(currMode === "light"){
+        currMode = "dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+        modeBtn.innerText = "Light Mode";
+
+    }
+    else{
+        currMode = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+        modeBtn.innerText = "Dark Mode";
+    }
+})
+
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissor"];
     const randIdx = Math.floor(Math.random() * 3);
